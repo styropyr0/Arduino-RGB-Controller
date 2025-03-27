@@ -181,7 +181,6 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "SET PARAMETERS";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // parity
             // 
@@ -261,7 +260,6 @@
             this.textBox1.Text = "Select the port to which your arduino is connected and click CONNECT. Make sure t" +
     "hat the colorMod sketch is uploaded to it. Otherwise, your arduino will not comm" +
     "unicate with this application.";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // progressBar
             // 
@@ -402,7 +400,6 @@
             this.label1.Size = new System.Drawing.Size(37, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "RED";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // TBred
             // 
@@ -430,7 +427,6 @@
             this.groupBox4.TabIndex = 12;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "CONTROL";
-            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // label9
             // 
@@ -663,7 +659,6 @@
             this.label10.Size = new System.Drawing.Size(223, 17);
             this.label10.TabIndex = 17;
             this.label10.Text = "Don\'t change the default parameters";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
             // 
@@ -698,7 +693,6 @@
             this.Text = "COLORMOD";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.ForeColorChanged += new System.EventHandler(this.Form1_ForeColorChanged);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

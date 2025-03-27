@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO.Ports;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
@@ -80,7 +75,6 @@ namespace colorMod
                         progressBar.Value = 20;
                         textBox1.Text = "Establishing secure connection with " + portC.Text;
                         progressBar.Value = 40;
-                        //string b = "996";
                         arduino.Open();
                         if (arduino.IsOpen)
                             progressBar.Value = 60;
@@ -119,7 +113,7 @@ namespace colorMod
                         }
                     }
                 }
-                catch(Exception err)
+                catch(Exception)
                 {
                     progressBar.Value = 0;
                     connectBtn.Text = "CONNECT";
@@ -145,7 +139,7 @@ namespace colorMod
                 return ct;
             }
 
-            catch(Exception e)
+            catch (Exception)
             {
                 return 20;
             }
@@ -157,11 +151,6 @@ namespace colorMod
             portC.Items.Clear();
             portC.Items.Add("None");
             portC.Items.AddRange(ports);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void TBred_Scroll(object sender, EventArgs e)
@@ -311,11 +300,6 @@ namespace colorMod
             button1.Enabled = true;
         }
 
-        private void Form1_ForeColorChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (arduino.IsOpen)
@@ -323,11 +307,6 @@ namespace colorMod
                 arduino.WriteLine("1024");
                 arduino.Close();
             }
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
 
         }
 
@@ -360,7 +339,6 @@ namespace colorMod
         }
 
 
-
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             label9.Text = ((trackBar1.Value * 2) + 10).ToString()+"ms";
@@ -370,21 +348,6 @@ namespace colorMod
                 arduino.WriteLine("10");
                 arduino.WriteLine(del.ToString());
             }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox4_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void redTB_TextChanged(object sender, EventArgs e)

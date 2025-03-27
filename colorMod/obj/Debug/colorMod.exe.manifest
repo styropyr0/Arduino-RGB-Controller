@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="colorMod.exe" size="56320">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="colorMod.exe" size="55808">
       <assemblyIdentity name="colorMod" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>lev3EIEQlsdejATxiwai3j4vC62X0h5IO6h8guO74DY=</dsig:DigestValue>
+        <dsig:DigestValue>qHBe+6V70cvBNyu5Xr5/ApfDEGy2gkNWKqTxLfAID9s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
