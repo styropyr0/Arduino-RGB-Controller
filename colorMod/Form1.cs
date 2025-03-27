@@ -4,13 +4,13 @@ using System.IO.Ports;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
- 
+
 namespace colorMod
 {
 
     public partial class Form1 : Form
     {
-        int blueVal = 512, redVal = 0, greenVal = 256, del=1100;
+        int blueVal = 512, redVal = 0, greenVal = 256, del = 1100;
         public Form1()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace colorMod
             baudC.Text = "9600";
             dataC.Text = "Use Default";
             parityC.Text = "Use Default";
-            stopC.Text= "Use Default";
+            stopC.Text = "Use Default";
             button1.Enabled = false;
             groupBox3.Enabled = false;
             groupBox4.Hide();
@@ -85,11 +85,11 @@ namespace colorMod
                             progressBar.Value = 0;
                             textBox1.Text = "Couldn't cnnect to " + pName;
                             progressBar.Visible = false;
-				    arduino.Close();
+                            arduino.Close();
                         }
                         textBox1.Text = "Waiting for handshaking signal.";
                         task.Start();
-                        int ct= await task;
+                        int ct = await task;
                         if (ct >= 10 && ct < 500)
                         {
                             textBox1.Text = "ERR_TIMEOUT No handshaking signal recieved. No sketch on the board or sketch incompatible.";
@@ -113,7 +113,7 @@ namespace colorMod
                         }
                     }
                 }
-                catch(Exception)
+                catch (Exception)
                 {
                     progressBar.Value = 0;
                     connectBtn.Text = "CONNECT";
@@ -131,7 +131,7 @@ namespace colorMod
                 string s = "FTERjhgdstkjlsa";
                 while (ct < 100)
                 {
-                    arduino.ReadTimeout=5000;
+                    arduino.ReadTimeout = 5000;
                     if (arduino.ReadLine().Trim().Length == s.Length)
                         ct = 11000;
                     else ct = 100;
@@ -160,7 +160,7 @@ namespace colorMod
             redTB.Text = TBred.Value.ToString();
             button1.Enabled = true;
             button1.Text = "TURN OFF ALL COLORS";
-            textBox2.Text = "#" + redVal + "#" + (greenVal-256) + "#" + (blueVal-512);
+            textBox2.Text = "#" + redVal + "#" + (greenVal - 256) + "#" + (blueVal - 512);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -170,7 +170,7 @@ namespace colorMod
             TBblue.Value = TBgreen.Value = TBred.Value = 0;
             greenTB.Text = redTB.Text = blueTB.Text = "0";
             textBox2.Text = "TURNED OFF";
-            button1.Text="TURNED OFF";
+            button1.Text = "TURNED OFF";
 
         }
 
@@ -341,8 +341,8 @@ namespace colorMod
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            label9.Text = ((trackBar1.Value * 2) + 10).ToString()+"ms";
-            del = ((trackBar1.Value*2)+10)*110;
+            label9.Text = ((trackBar1.Value * 2) + 10).ToString() + "ms";
+            del = ((trackBar1.Value * 2) + 10) * 110;
             if (button10.Text == "STOP")
             {
                 arduino.WriteLine("10");
@@ -379,7 +379,7 @@ namespace colorMod
 
         private void TBgreen_Scroll(object sender, EventArgs e)
         {
-            greenVal = TBgreen.Value+256;
+            greenVal = TBgreen.Value + 256;
             arduino.WriteLine(greenVal.ToString());
             greenTB.Text = TBgreen.Value.ToString();
             button1.Enabled = true;
@@ -388,7 +388,8 @@ namespace colorMod
         }
 
         private void TBblue_Scroll(object sender, EventArgs e)
-        {   blueVal= TBblue.Value+512;
+        {
+            blueVal = TBblue.Value + 512;
             arduino.WriteLine(blueVal.ToString());
             blueTB.Text = TBblue.Value.ToString();
             button1.Enabled = true;
