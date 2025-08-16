@@ -7,7 +7,7 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="colorMod.exe.manifest" size="3958">
+    <dependentAssembly dependencyType="install" codebase="Application Files\colorMod_1_0_0_18\colorMod.exe.manifest" size="3958">
       <assemblyIdentity name="colorMod.exe" version="1.0.0.18" publicKeyToken="0000000000000000" language="en-IN" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>

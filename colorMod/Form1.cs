@@ -75,6 +75,8 @@ namespace colorMod
                         progressBar.Value = 20;
                         textBox1.Text = "Establishing secure connection with " + portC.Text;
                         progressBar.Value = 40;
+                        arduino.DtrEnable = true;
+                        arduino.RtsEnable = true;
                         arduino.Open();
                         if (arduino.IsOpen)
                             progressBar.Value = 60;
@@ -129,9 +131,9 @@ namespace colorMod
             {
                 int ct = 0;
                 string s = "FTERjhgdstkjlsa";
+                arduino.ReadTimeout = 15000;
                 while (ct < 100)
                 {
-                    arduino.ReadTimeout = 5000;
                     if (arduino.ReadLine().Trim().Length == s.Length)
                         ct = 11000;
                     else ct = 100;
