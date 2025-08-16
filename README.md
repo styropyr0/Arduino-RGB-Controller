@@ -22,6 +22,9 @@ This Windows application allows users to control an RGB LED connected to an Ardu
 3. Build and run the application.
 
 ## Usage
+### Upload the sketch
+1. Upload the sketch insider `arduino source code` directory.
+
 ### Connecting to Arduino
 1. Select the correct **COM port** from the dropdown.
 2. Set the **baud rate** (default: 9600).
