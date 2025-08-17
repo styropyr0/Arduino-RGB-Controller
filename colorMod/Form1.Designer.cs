@@ -36,6 +36,8 @@
             this.dataC = new System.Windows.Forms.ComboBox();
             this.baudC = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.parity = new System.Windows.Forms.Label();
             this.parityC = new System.Windows.Forms.ComboBox();
             this.stopbit = new System.Windows.Forms.Label();
@@ -46,6 +48,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.whiteTB = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TBwhite = new System.Windows.Forms.TrackBar();
             this.blueTB = new System.Windows.Forms.TextBox();
             this.greenTB = new System.Windows.Forms.TextBox();
             this.redTB = new System.Windows.Forms.TextBox();
@@ -60,41 +66,29 @@
             this.TBred = new System.Windows.Forms.TrackBar();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.button1 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.livel = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TBwhite)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TBblue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TBgreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TBred)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // connectBtn
             // 
             this.connectBtn.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.connectBtn.Location = new System.Drawing.Point(66, 254);
+            this.connectBtn.Location = new System.Drawing.Point(66, 260);
             this.connectBtn.Name = "connectBtn";
             this.connectBtn.Size = new System.Drawing.Size(137, 33);
             this.connectBtn.TabIndex = 0;
@@ -182,6 +176,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "SET PARAMETERS";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(21, 226);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(216, 17);
+            this.label11.TabIndex = 18;
+            this.label11.Text = " unless you know what you\'re doing";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(21, 208);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(223, 17);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Don\'t change the default parameters";
+            // 
             // parity
             // 
             this.parity.AutoSize = true;
@@ -249,7 +265,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Variable Small", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI Variable Small Semibol", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(12, 323);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -271,6 +287,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.whiteTB);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.TBwhite);
             this.groupBox2.Controls.Add(this.blueTB);
             this.groupBox2.Controls.Add(this.greenTB);
             this.groupBox2.Controls.Add(this.redTB);
@@ -287,16 +307,55 @@
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(306, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(457, 298);
+            this.groupBox2.Size = new System.Drawing.Size(594, 357);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "CONTROL";
+            // 
+            // whiteTB
+            // 
+            this.whiteTB.BackColor = System.Drawing.Color.White;
+            this.whiteTB.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.whiteTB.Location = new System.Drawing.Point(499, 300);
+            this.whiteTB.Name = "whiteTB";
+            this.whiteTB.Size = new System.Drawing.Size(66, 27);
+            this.whiteTB.TabIndex = 24;
+            this.whiteTB.Text = "0";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(440, 303);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 20);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "White:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(17, 240);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 20);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "WHITE";
+            // 
+            // TBwhite
+            // 
+            this.TBwhite.Location = new System.Drawing.Point(94, 231);
+            this.TBwhite.Maximum = 255;
+            this.TBwhite.Name = "TBwhite";
+            this.TBwhite.Size = new System.Drawing.Size(482, 56);
+            this.TBwhite.TabIndex = 21;
+            this.TBwhite.Scroll += new System.EventHandler(this.TBwhite_Scroll);
             // 
             // blueTB
             // 
             this.blueTB.BackColor = System.Drawing.Color.White;
             this.blueTB.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blueTB.Location = new System.Drawing.Point(358, 251);
+            this.blueTB.Location = new System.Drawing.Point(352, 299);
             this.blueTB.Name = "blueTB";
             this.blueTB.Size = new System.Drawing.Size(66, 27);
             this.blueTB.TabIndex = 20;
@@ -306,7 +365,7 @@
             // 
             this.greenTB.BackColor = System.Drawing.Color.White;
             this.greenTB.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.greenTB.Location = new System.Drawing.Point(221, 251);
+            this.greenTB.Location = new System.Drawing.Point(215, 299);
             this.greenTB.Name = "greenTB";
             this.greenTB.Size = new System.Drawing.Size(66, 27);
             this.greenTB.TabIndex = 19;
@@ -316,7 +375,7 @@
             // 
             this.redTB.BackColor = System.Drawing.Color.White;
             this.redTB.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.redTB.Location = new System.Drawing.Point(75, 251);
+            this.redTB.Location = new System.Drawing.Point(69, 299);
             this.redTB.Name = "redTB";
             this.redTB.Size = new System.Drawing.Size(66, 27);
             this.redTB.TabIndex = 18;
@@ -327,7 +386,7 @@
             // 
             this.blue.AutoSize = true;
             this.blue.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blue.Location = new System.Drawing.Point(310, 254);
+            this.blue.Location = new System.Drawing.Point(304, 302);
             this.blue.Name = "blue";
             this.blue.Size = new System.Drawing.Size(42, 20);
             this.blue.TabIndex = 17;
@@ -337,7 +396,7 @@
             // 
             this.green.AutoSize = true;
             this.green.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.green.Location = new System.Drawing.Point(161, 254);
+            this.green.Location = new System.Drawing.Point(155, 302);
             this.green.Name = "green";
             this.green.Size = new System.Drawing.Size(54, 20);
             this.green.TabIndex = 16;
@@ -347,7 +406,7 @@
             // 
             this.red.AutoSize = true;
             this.red.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.red.Location = new System.Drawing.Point(31, 254);
+            this.red.Location = new System.Drawing.Point(25, 302);
             this.red.Name = "red";
             this.red.Size = new System.Drawing.Size(38, 20);
             this.red.TabIndex = 15;
@@ -368,7 +427,7 @@
             this.TBblue.Location = new System.Drawing.Point(94, 163);
             this.TBblue.Maximum = 255;
             this.TBblue.Name = "TBblue";
-            this.TBblue.Size = new System.Drawing.Size(357, 56);
+            this.TBblue.Size = new System.Drawing.Size(482, 56);
             this.TBblue.TabIndex = 13;
             this.TBblue.Scroll += new System.EventHandler(this.TBblue_Scroll);
             // 
@@ -387,7 +446,7 @@
             this.TBgreen.Location = new System.Drawing.Point(94, 95);
             this.TBgreen.Maximum = 255;
             this.TBgreen.Name = "TBgreen";
-            this.TBgreen.Size = new System.Drawing.Size(357, 56);
+            this.TBgreen.Size = new System.Drawing.Size(482, 56);
             this.TBgreen.TabIndex = 11;
             this.TBgreen.Scroll += new System.EventHandler(this.TBgreen_Scroll);
             // 
@@ -406,7 +465,7 @@
             this.TBred.Location = new System.Drawing.Point(94, 33);
             this.TBred.Maximum = 255;
             this.TBred.Name = "TBred";
-            this.TBred.Size = new System.Drawing.Size(357, 56);
+            this.TBred.Size = new System.Drawing.Size(482, 56);
             this.TBred.TabIndex = 9;
             this.TBred.Scroll += new System.EventHandler(this.TBred_Scroll);
             // 
@@ -423,7 +482,7 @@
             this.groupBox4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(306, 5);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(457, 312);
+            this.groupBox4.Size = new System.Drawing.Size(594, 365);
             this.groupBox4.TabIndex = 12;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "CONTROL";
@@ -436,6 +495,17 @@
             this.label9.Size = new System.Drawing.Size(17, 20);
             this.label9.TabIndex = 31;
             this.label9.Text = "0";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(13, 199);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(431, 20);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "NOTE : Higher delay values might result in less smooth fades.";
             // 
             // label6
             // 
@@ -488,196 +558,44 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(306, 329);
+            this.button1.Location = new System.Drawing.Point(429, 376);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 62);
+            this.button1.Size = new System.Drawing.Size(114, 69);
             this.button1.TabIndex = 9;
             this.button1.Text = "TURN OFF ALL COLORS";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.button9);
-            this.groupBox3.Controls.Add(this.button8);
-            this.groupBox3.Controls.Add(this.button7);
-            this.groupBox3.Controls.Add(this.button6);
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(426, 319);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(337, 127);
-            this.groupBox3.TabIndex = 10;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "COMMON COLORS";
-            // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.White;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Gray;
-            this.textBox2.Location = new System.Drawing.Point(153, 91);
+            this.textBox2.Location = new System.Drawing.Point(558, 395);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(171, 20);
+            this.textBox2.Size = new System.Drawing.Size(342, 27);
             this.textBox2.TabIndex = 11;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 91);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "SELECTED COLOR: ";
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Bahnschrift", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(253, 55);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 7;
-            this.button9.Text = "ORANGE";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Bahnschrift Condensed", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(172, 55);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 6;
-            this.button8.Text = "SKY BLUE";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Bahnschrift Condensed", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(91, 55);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "TURQOUISE";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Bahnschrift", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(10, 55);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "PURPLE";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Bahnschrift", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(253, 26);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "YELLOW";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Bahnschrift", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(172, 26);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "GREEN";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Bahnschrift", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(91, 26);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "BLUE";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Bahnschrift", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(10, 26);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "RED";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // livel
             // 
             this.livel.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.livel.Location = new System.Drawing.Point(306, 393);
+            this.livel.Location = new System.Drawing.Point(306, 376);
             this.livel.Name = "livel";
-            this.livel.Size = new System.Drawing.Size(114, 53);
+            this.livel.Size = new System.Drawing.Size(114, 70);
             this.livel.TabIndex = 11;
             this.livel.Text = "DYNAMIC LIGHTING";
             this.livel.UseVisualStyleBackColor = true;
             this.livel.Click += new System.EventHandler(this.livel_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(13, 199);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(431, 20);
-            this.label7.TabIndex = 30;
-            this.label7.Text = "NOTE : Higher delay values might result in less smooth fades.";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(21, 202);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(223, 17);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Don\'t change the default parameters";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(21, 219);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(216, 17);
-            this.label11.TabIndex = 18;
-            this.label11.Text = " unless you know what you\'re doing";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(775, 458);
-            this.Controls.Add(this.groupBox3);
+            this.ClientSize = new System.Drawing.Size(912, 458);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.livel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
@@ -697,14 +615,13 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TBwhite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TBblue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TBgreen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TBred)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -741,17 +658,7 @@
         private System.Windows.Forms.Label green;
         private System.Windows.Forms.Label red;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button livel;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Label label8;
@@ -763,6 +670,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TrackBar TBwhite;
+        private System.Windows.Forms.TextBox whiteTB;
+        private System.Windows.Forms.Label label12;
     }
 }
 

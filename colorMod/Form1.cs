@@ -10,7 +10,7 @@ namespace colorMod
 
     public partial class Form1 : Form
     {
-        int blueVal = 512, redVal = 0, greenVal = 256, del = 1100;
+        int blueVal = 512, redVal = 0, greenVal = 256, whiteVal = 768, del = 1100;
         public Form1()
         {
             InitializeComponent();
@@ -24,7 +24,6 @@ namespace colorMod
             parityC.Text = "Use Default";
             stopC.Text = "Use Default";
             button1.Enabled = false;
-            groupBox3.Enabled = false;
             groupBox4.Hide();
             livel.Enabled = false;
 
@@ -42,16 +41,14 @@ namespace colorMod
                 textBox1.Text = "Disconnected from " + arduino.PortName;
                 arduino.Close();
                 groupBox2.Show();
-                groupBox3.Show();
                 groupBox2.Enabled = false;
-                groupBox3.Enabled = false;
                 groupBox4.Hide();
                 livel.Enabled = false;
                 button1.Enabled = false;
                 redTB.Text = "0";
                 blueTB.Text = "0";
                 greenTB.Text = "0";
-                TBblue.Value = TBgreen.Value = TBred.Value = 0;
+                TBblue.Value = TBgreen.Value = TBred.Value = TBwhite.Value = 0;
             }
             else
             {
@@ -110,7 +107,6 @@ namespace colorMod
                             textBox1.Text = "Connected to " + pName;
                             connectBtn.Text = "DISCONNECT";
                             groupBox2.Enabled = true;
-                            groupBox3.Enabled = true;
                             livel.Enabled = true;
                         }
                     }
@@ -169,137 +165,11 @@ namespace colorMod
         {
             arduino.WriteLine("1024");
             button1.Enabled = false;
-            TBblue.Value = TBgreen.Value = TBred.Value = 0;
-            greenTB.Text = redTB.Text = blueTB.Text = "0";
+            TBblue.Value = TBgreen.Value = TBred.Value = TBwhite.Value = 0;
+            greenTB.Text = redTB.Text = blueTB.Text = whiteTB.Text = "0";
             textBox2.Text = "TURNED OFF";
             button1.Text = "TURNED OFF";
 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            arduino.WriteLine("1024");
-            arduino.WriteLine("255");
-            textBox2.Text = "RED";
-            TBblue.Value = 0;
-            TBgreen.Value = 0;
-            TBred.Value = 255;
-            blueTB.Text = "0";
-            greenTB.Text = "0";
-            redTB.Text = "255";
-            button1.Text = "TURN OFF ALL COLORS";
-            button1.Enabled = true;
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            arduino.WriteLine("1024");
-            arduino.WriteLine("767");
-            textBox2.Text = "BLUE";
-            TBblue.Value = 255;
-            TBgreen.Value = 0;
-            TBred.Value = 0;
-            blueTB.Text = "255";
-            greenTB.Text = "0";
-            redTB.Text = "0";
-            button1.Text = "TURN OFF ALL COLORS";
-            button1.Enabled = true;
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            arduino.WriteLine("1024");
-            arduino.WriteLine("511");
-            textBox2.Text = "RED";
-            TBblue.Value = 0;
-            TBgreen.Value = 255;
-            TBred.Value = 0;
-            blueTB.Text = "0";
-            greenTB.Text = "255";
-            redTB.Text = "0";
-            button1.Text = "TURN OFF ALL COLORS";
-            button1.Enabled = true;
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            arduino.WriteLine("1024");
-            arduino.WriteLine("220");
-            arduino.WriteLine("511");
-            arduino.WriteLine("513");
-            textBox2.Text = "YELLOW";
-            TBblue.Value = 1;
-            TBgreen.Value = 255;
-            TBred.Value = 220;
-            blueTB.Text = "1";
-            greenTB.Text = "255";
-            redTB.Text = "220";
-            button1.Text = "TURN OFF ALL COLORS";
-            button1.Enabled = true;
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            arduino.WriteLine("1024");
-            arduino.WriteLine("767");
-            arduino.WriteLine("122");
-            textBox2.Text = "PURPLE";
-            TBblue.Value = 255;
-            TBgreen.Value = 0;
-            TBred.Value = 122;
-            blueTB.Text = "255";
-            greenTB.Text = "0";
-            redTB.Text = "122";
-            button1.Text = "TURN OFF ALL COLORS";
-            button1.Enabled = true;
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            arduino.WriteLine("1024");
-            arduino.WriteLine("511");
-            arduino.WriteLine("642");
-            textBox2.Text = "TURQOUISE";
-            TBblue.Value = 130;
-            TBgreen.Value = 255;
-            TBred.Value = 0;
-            blueTB.Text = "130";
-            greenTB.Text = "255";
-            redTB.Text = "0";
-            button1.Text = "TURN OFF ALL COLORS";
-            button1.Enabled = true;
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            arduino.WriteLine("1024");
-            arduino.WriteLine("380");
-            arduino.WriteLine("767");
-            textBox2.Text = "SKY BLUE";
-            TBblue.Value = 255;
-            TBgreen.Value = 125;
-            TBred.Value = 132;
-            blueTB.Text = "255";
-            greenTB.Text = "125";
-            redTB.Text = "132";
-            button1.Text = "TURN OFF ALL COLORS";
-            button1.Enabled = true;
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            arduino.WriteLine("1024");
-            arduino.WriteLine("255");
-            arduino.WriteLine("315");
-            textBox2.Text = "ORANGE";
-            TBblue.Value = 0;
-            TBgreen.Value = 60;
-            TBred.Value = 255;
-            blueTB.Text = "0";
-            greenTB.Text = "60";
-            redTB.Text = "255";
-            button1.Text = "TURN OFF ALL COLORS";
-            button1.Enabled = true;
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -318,7 +188,6 @@ namespace colorMod
             {
                 Point p = new Point(306, 12);
                 groupBox2.Hide();
-                groupBox3.Hide();
                 arduino.WriteLine("1024");
                 livel.Text = "STATIC LIGHTING";
                 groupBox4.Location = p;
@@ -332,7 +201,6 @@ namespace colorMod
                 arduino.WriteLine("10");
                 groupBox4.Hide();
                 groupBox2.Show();
-                groupBox3.Show();
                 button1.Show();
                 button10.Text = "START";
                 livel.Text = "DYNAMIC LIGHTING";
@@ -360,6 +228,16 @@ namespace colorMod
             button1.Enabled = true;
             button1.Text = "TURN OFF ALL COLORS";
             textBox2.Text = "#" + redVal + "#" + (greenVal - 256) + "#" + (blueVal - 512);*/
+        }
+
+        private void TBwhite_Scroll(object sender, EventArgs e)
+        {
+            whiteVal = TBwhite.Value + 768;
+            arduino.WriteLine(whiteVal.ToString());
+            whiteTB.Text = TBwhite.Value.ToString();
+            button1.Enabled = true;
+            button1.Text = "TURN OFF ALL COLORS";
+            textBox2.Text = "#" + redVal + "#" + (greenVal - 256) + "#" + (blueVal - 512) + "#" + (whiteVal - 768);
         }
 
         private void button10_Click(object sender, EventArgs e)
