@@ -1,4 +1,4 @@
-### Arduino RGB Controller Application for Windows - .NET Project
+# ColorMod: PC Tool for Serial-Based LED Control
 
 ## Overview
 This Windows application allows users to control an RGB LED connected to an Arduino board via a serial connection. The application provides both static and dynamic lighting options, enabling users to manually set RGB values or choose from predefined colors.
