@@ -482,7 +482,7 @@
             this.groupBox4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(306, 5);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(594, 365);
+            this.groupBox4.Size = new System.Drawing.Size(594, 357);
             this.groupBox4.TabIndex = 12;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "CONTROL";
@@ -490,7 +490,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(248, 147);
+            this.label9.Location = new System.Drawing.Point(329, 147);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(17, 20);
             this.label9.TabIndex = 31;
@@ -501,7 +501,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(13, 199);
+            this.label7.Location = new System.Drawing.Point(83, 199);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(431, 20);
             this.label7.TabIndex = 30;
@@ -510,7 +510,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(382, 147);
+            this.label6.Location = new System.Drawing.Point(523, 147);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 20);
             this.label6.TabIndex = 29;
@@ -528,7 +528,7 @@
             // button10
             // 
             this.button10.Font = new System.Drawing.Font("Segoe UI Variable Display", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(138, 240);
+            this.button10.Location = new System.Drawing.Point(215, 246);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(190, 47);
             this.button10.TabIndex = 27;
@@ -551,7 +551,7 @@
             this.trackBar1.Location = new System.Drawing.Point(87, 102);
             this.trackBar1.Maximum = 255;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(357, 56);
+            this.trackBar1.Size = new System.Drawing.Size(489, 56);
             this.trackBar1.TabIndex = 13;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
@@ -598,10 +598,10 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.livel);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox4);
             this.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
