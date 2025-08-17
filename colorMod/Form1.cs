@@ -158,7 +158,6 @@ namespace colorMod
             redTB.Text = TBred.Value.ToString();
             button1.Enabled = true;
             button1.Text = "TURN OFF ALL COLORS";
-            textBox2.Text = "#" + redVal + "#" + (greenVal - 256) + "#" + (blueVal - 512);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -167,7 +166,6 @@ namespace colorMod
             button1.Enabled = false;
             TBblue.Value = TBgreen.Value = TBred.Value = TBwhite.Value = 0;
             greenTB.Text = redTB.Text = blueTB.Text = whiteTB.Text = "0";
-            textBox2.Text = "TURNED OFF";
             button1.Text = "TURNED OFF";
 
         }
@@ -226,8 +224,7 @@ namespace colorMod
             arduino.WriteLine(redVal.ToString());
             redTB.Text = TBred.Value.ToString();
             button1.Enabled = true;
-            button1.Text = "TURN OFF ALL COLORS";
-            textBox2.Text = "#" + redVal + "#" + (greenVal - 256) + "#" + (blueVal - 512);*/
+            button1.Text = "TURN OFF ALL COLORS";*/
         }
 
         private void TBwhite_Scroll(object sender, EventArgs e)
@@ -237,7 +234,6 @@ namespace colorMod
             whiteTB.Text = TBwhite.Value.ToString();
             button1.Enabled = true;
             button1.Text = "TURN OFF ALL COLORS";
-            textBox2.Text = "#" + redVal + "#" + (greenVal - 256) + "#" + (blueVal - 512) + "#" + (whiteVal - 768);
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -264,7 +260,6 @@ namespace colorMod
             greenTB.Text = TBgreen.Value.ToString();
             button1.Enabled = true;
             button1.Text = "TURN OFF ALL COLORS";
-            textBox2.Text = "#" + redVal + "#" + (greenVal - 256) + "#" + (blueVal - 512);
         }
 
         private void TBblue_Scroll(object sender, EventArgs e)
@@ -274,7 +269,6 @@ namespace colorMod
             blueTB.Text = TBblue.Value.ToString();
             button1.Enabled = true;
             button1.Text = "TURN OFF ALL COLORS";
-            textBox2.Text = "#" + redVal + "#" + (greenVal - 256) + "#" + (blueVal - 512);
         }
 
 

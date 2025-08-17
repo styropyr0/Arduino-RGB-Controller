@@ -73,7 +73,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.livel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -265,7 +264,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Variable Small Semibol", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(12, 323);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -558,32 +557,20 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(429, 376);
+            this.button1.Location = new System.Drawing.Point(593, 377);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 69);
+            this.button1.Size = new System.Drawing.Size(307, 69);
             this.button1.TabIndex = 9;
             this.button1.Text = "TURN OFF ALL COLORS";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Gray;
-            this.textBox2.Location = new System.Drawing.Point(558, 395);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(342, 27);
-            this.textBox2.TabIndex = 11;
-            // 
             // livel
             // 
             this.livel.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.livel.Location = new System.Drawing.Point(306, 376);
+            this.livel.Location = new System.Drawing.Point(306, 377);
             this.livel.Name = "livel";
-            this.livel.Size = new System.Drawing.Size(114, 70);
+            this.livel.Size = new System.Drawing.Size(281, 70);
             this.livel.TabIndex = 11;
             this.livel.Text = "DYNAMIC LIGHTING";
             this.livel.UseVisualStyleBackColor = true;
@@ -595,7 +582,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(912, 458);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.livel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.progressBar);
@@ -658,7 +644,6 @@
         private System.Windows.Forms.Label green;
         private System.Windows.Forms.Label red;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button livel;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Label label8;
